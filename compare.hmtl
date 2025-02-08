@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Compare & Get Price Alerts</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+    }
+    input, button {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    button {
+      background-color: #0073e6;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Price Drop Alerts</h1>
+  <p>Enter the event date, set your desired price threshold (in GBP), and provide your email to get alerts.</p>
+  
+  <!-- Formspree Form -->
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <label for="eventDate">Event Date:</label>
+    <input type="date" id="eventDate" name="eventDate" required>
+    
+    <label for="priceThreshold">Price Threshold (GBP):</label>
+    <input type="number" id="priceThreshold" name="priceThreshold" required>
+    
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="_replyto" required>
+    
+    <button type="submit">Subscribe for Alerts</button>
+  </form>
+  
+  <p>After submitting, you'll receive an email confirmation (via Formspree).</p>
+</body>
+</html>
